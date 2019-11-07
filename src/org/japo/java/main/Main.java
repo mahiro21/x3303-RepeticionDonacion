@@ -15,6 +15,7 @@
  */
 package org.japo.java.main;
 
+import java.util.Locale;
 import java.util.Random;
 
 /**
@@ -36,7 +37,7 @@ public class Main {
         double euros;
         double royaltis;
 
-        donaciones = 0;
+        donaciones = 1;
 
         System.out.println("Maratón solidario");
         System.out.println("=================");
@@ -44,6 +45,6 @@ public class Main {
             euros = RND.nextDouble() * (MAX - MIN) + MIN;
             royaltis += euros;
         }
-        System.out.printf("Dinero recaudado ..: %.2f%n", royaltis);
+        System.out.printf(Locale.ENGLISH, "Dinero recaudado ..: %.2f€%n", royaltis);
     }
 }
